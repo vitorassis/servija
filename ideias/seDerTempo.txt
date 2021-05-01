@@ -1,0 +1,5 @@
+Se der tempo:
+
+    Pré-aprovação do admin (cadusu)
+    Avaliação do serviço (avserv)
+    Validação de email e login já existente (telcadusu, telaltusu)

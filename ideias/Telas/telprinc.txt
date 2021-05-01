@@ -1,0 +1,13 @@
+telprinc
+    -Menu 
+        -btn => telsobre
+        -SE NÃO LOGADO
+            -btn => tellogin
+            -btn => telcadusu
+        -SE LOGADO (anunciante)
+            -btn => telminhaconta
+        -cxPesq
+            (cat + termo) : Amazon
+        -cxLoc
+            (cep + select) : MercadoLivre
+

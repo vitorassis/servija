@@ -1,0 +1,3 @@
+teladlocal
+    -selectmult > cidades
+    -select > cidadeprinc
