@@ -6,35 +6,39 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 
-import lombok.Getter;
-import lombok.Setter;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 @Entity
-@Table(name = "cidades")
+@Table(name = "cidades",
+	    uniqueConstraints=
+	        @UniqueConstraint(columnNames={"estado_id", "nome"})
+)
 public class Cidade {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
-	@OneToOne
+	@ManyToOne
 	@JoinColumn(name="estado_id", referencedColumnName = "id")
 	private Estado estado;
 	
-/*	@OneToOne
+	@ManyToOne
 	@JoinColumn(name="localidade_id", referencedColumnName = "id")
-	@Column(nullable = true)
-	@Getter @Setter private Localidade localidade;
-*/	
+	@JsonBackReference
+	private Localidade localidade;
+	
 	@Column
-	@Getter @Setter private String nome;
+	private String nome;
 	
 	public Cidade(Estado estado, String nome) {
 		this.estado = estado;
-	//	this.localidade = null;
+		this.localidade = null;
 		this.nome = nome;
 	}
 	
@@ -69,6 +73,13 @@ public class Cidade {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+
+	public void setLocalidade(Localidade localidade) {
+		this.localidade = localidade;
+	}
 	
+	public Localidade getLocalidade() {
+		return this.localidade;
+	}
 	
 }

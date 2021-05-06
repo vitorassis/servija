@@ -1,6 +1,7 @@
 package servija.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -25,7 +26,7 @@ public class EstadoController {
 	@RequestMapping("/listar")
 	@GetMapping
 	public List<Estado> get() {
-		return estRepository.findAll();
+		return estRepository.findAll(Sort.by(Sort.Direction.ASC, "nome"));
 	}
 	
 	@RequestMapping("/atualizar")

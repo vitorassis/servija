@@ -27,7 +27,7 @@ CREATE TABLE usuarios(
 CREATE TABLE admins(
     id INT AUTO_INCREMENT,
     usuario_id INT,
-    PRIMARY KEY(id),
+    PRIMARY KEY(usuario_id),
     FOREIGN KEY(usuario_id) REFERENCES usuarios(id)
 );
 
@@ -68,7 +68,7 @@ CREATE TABLE anunciantes(
     nome VARCHAR(100),
     empresa VARCHAR(100),
     cpf VARCHAR(11) UNIQUE, -- SEM MÁSCARA
-    PRIMARY KEY(id),
+    PRIMARY KEY(usuario_id),
     FOREIGN KEY(usuario_id) REFERENCES usuarios(id)
 );
 

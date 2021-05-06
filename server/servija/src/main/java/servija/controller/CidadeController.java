@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -43,7 +44,7 @@ public class CidadeController {
 	public List<Cidade> get(@PathVariable(value="sigla") String sigla){
 		Estado estado = estRepository.getEstadoBySigla(sigla);
 		
-		return cidRepository.getCidadeByEstado(estado);
+		return cidRepository.getCidadeByEstado(estado, Sort.by(Sort.Direction.ASC, "nome"));
 	}
 	
 	@RequestMapping("/atualizar")
