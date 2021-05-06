@@ -8,4 +8,5 @@ import servija.model.Estado;
 @Repository
 public interface EstadoRepository extends JpaRepository<Estado, Integer> {
 	boolean existsEstadoByNome(String nome);
+	Estado getEstadoBySigla(String sigla);
 }

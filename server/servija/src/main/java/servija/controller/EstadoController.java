@@ -22,11 +22,13 @@ public class EstadoController {
 	@Autowired
 	private EstadoRepository estRepository;
 	
+	@RequestMapping("/listar")
 	@GetMapping
 	public List<Estado> get() {
 		return estRepository.findAll();
 	}
 	
+	@RequestMapping("/atualizar")
 	@PostMapping
 	@ResponseStatus(HttpStatus.CREATED)
 	public List<Estado> refresh() {

@@ -15,23 +15,13 @@ public class Cidade {
 	public static ArrayList<servija.model.Cidade> fetch(servija.model.Estado estado){
 		ArrayList<servija.model.Cidade> cidades = new ArrayList<servija.model.Cidade>();
 
+		
+		JSONArray estJson = new JSONArray(
+				ExternalJSONReader.access("https://servicodados.ibge.gov.br/api/v1/localidades/estados/"+estado.getCodigo()+"/municipios")
+		);
+		JSONObject obj;
+		
 		try {
-			HttpClient client = new DefaultHttpClient();
-			HttpGet request = new HttpGet("https://servicodados.ibge.gov.br/api/v1/localidades/estados/"+estado.getId()+"/municipios");
-			HttpResponse response = client.execute(request);
-	
-			// Get the response
-			BufferedReader rd = new BufferedReader
-			    (new InputStreamReader(
-			    response.getEntity().getContent()));
-	
-			String line = "", json = line;
-			while ((line = rd.readLine()) != null) {
-			    json+= line;
-			}
-			
-			JSONArray estJson = new JSONArray(json);
-			JSONObject obj;
 	        for(int i = 0; i < estJson.length(); i++){
 	        	obj = estJson.getJSONObject(i);
 

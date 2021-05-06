@@ -14,6 +14,7 @@ CREATE TABLE cidades(
     PRIMARY KEY(id),
     FOREIGN KEY(estado_id) REFERENCES estados(id)
 );
+ALTER TABLE `cidades` ADD UNIQUE `uq_cidUf`(estado_id, nome);
 
 CREATE TABLE usuarios(
     id INT AUTO_INCREMENT,

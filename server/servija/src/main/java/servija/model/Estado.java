@@ -8,6 +8,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Table(name = "estados")
@@ -19,8 +21,10 @@ public class Estado {
 	
 	@Column(nullable = false)
 	private String nome;
+	
 	@Column(nullable = false)
 	private int codigo;
+	
 	@Column(nullable = false)
 	private String sigla;
 	
@@ -31,6 +35,11 @@ public class Estado {
 		this.sigla = sigla;
 		this.codigo = codigo;
 	}
+	
+	
+	
+	//=====================================================================
+	
 
 	public int getId() {
 		return id;
@@ -63,30 +72,8 @@ public class Estado {
 	public void setSigla(String sigla) {
 		this.sigla = sigla;
 	}
-
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + codigo;
-		result = prime * result + id;
-		return result;
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Estado other = (Estado) obj;
-		if (codigo != other.codigo)
-			return false;
-		if (id != other.id)
-			return false;
-		return true;
-	}
+	
+	
+	
 	
 }
