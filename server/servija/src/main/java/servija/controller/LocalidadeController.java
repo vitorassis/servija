@@ -1,7 +1,5 @@
 package servija.controller;
 
-import java.util.HashSet;
-
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -41,12 +39,7 @@ public class LocalidadeController {
 	@RequestMapping("/{id}")
 	@GetMapping
 	public Localidade get(@PathVariable int id) {
-		Localidade local = new Localidade();
-		
-		local = locRepository.findById(id).get();
-		
-		
-		return local;
+		return locRepository.findById(id).orElse(null);
 	}
 	
 	@PostMapping
@@ -102,10 +95,16 @@ public class LocalidadeController {
 
 	@RequestMapping("/deletar/{id}")
 	@DeleteMapping
-	public boolean delete(@PathVariable int id) {
+	public boolean delete(@PathVariable int id, @RequestBody LocalRequest request) {
 		Localidade local = locRepository.findById(id).get();
 		if(local == null)
 			return false;
+		
+		Administrador admin = authenticator.auth(request.token);
+
+		if(admin == null)
+			return false;
+		
 		
 		for (Cidade cidade : local.getCidades())
 			cidade.setLocalidade(null);
