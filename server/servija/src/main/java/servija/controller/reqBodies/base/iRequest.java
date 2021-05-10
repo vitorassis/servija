@@ -9,5 +9,9 @@ public abstract class iRequest<T> {
 		this.token = token;
 		this.obj = obj;
 	}
+	
+	public iRequest(T obj) {
+		this.obj = obj;
+	}
 
 }

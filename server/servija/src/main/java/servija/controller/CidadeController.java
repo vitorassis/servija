@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import servija.controller.respBodies.Response;
 import servija.model.Cidade;
 import servija.model.Estado;
 import servija.repository.CidadeRepository;
@@ -29,59 +30,68 @@ public class CidadeController {
 	
 	@RequestMapping("/listar")
 	@GetMapping
-	public List<Cidade> get() {
-		return cidRepository.findAll();
+	public Response<List<Cidade>> get() {
+		return new Response<List<Cidade>>(true, "Cidades", cidRepository.findAll());
 	}
 	
 	@RequestMapping("/{id}")
 	@GetMapping
-	public Cidade get(@PathVariable(value = "id") int id) {
-		return cidRepository.findById(id).orElse(null);
+	public Response<Cidade> get(@PathVariable(value = "id") int id) {
+		return new Response<Cidade>(true, "Cidades", cidRepository.findById(id).orElse(null));
 	}
 
 	@RequestMapping("/estado/{sigla}")
 	@GetMapping
-	public List<Cidade> get(@PathVariable(value="sigla") String sigla){
-		Estado estado = estRepository.getEstadoBySigla(sigla);
+	public Response<List<Cidade>> get(@PathVariable(value="sigla") String sigla){
+		Response<List<Cidade>> response = new Response<List<Cidade>>(false, "Estado não encontrado", null);
 		
-		return cidRepository.getCidadeByEstado(estado, Sort.by(Sort.Direction.ASC, "nome"));
+		Estado estado = estRepository.getEstadoBySigla(sigla);
+		if(estado == null)
+			return response;
+		
+		return new Response<List<Cidade>>(true, "Cidades de "+sigla.toUpperCase(),cidRepository.getCidadeByEstado(estado, Sort.by(Sort.Direction.ASC, "nome")));
 	}
 	
 	@RequestMapping("/atualizar")
 	@PostMapping
 	@ResponseStatus(HttpStatus.CREATED)
-	public boolean refresh() {
-		
+	public Response<List<Cidade>> refresh() {		
 		ArrayList<Estado> estados = (ArrayList) estRepository.findAll();
+		ArrayList<Cidade> alCidades = new ArrayList<Cidade>();
 		
 		boolean sucesso = true;
 		
 		for (Estado estado : estados) {
 			ArrayList<Cidade> cidades = servija.helper.Cidade.fetch(estado);
-			
-			cidRepository.saveAll(cidades);
-			
-			sucesso &= (cidRepository.count() == cidades.size());
+			alCidades.addAll(cidades);
+			try {
+				cidRepository.saveAll(cidades);
+			}catch(Exception ex) {}
+			sucesso &= (cidRepository.getCidadeByEstado(estado).size() == cidades.size());
 		}
 		
-		return sucesso;
+		return new Response<List<Cidade>>(sucesso, 
+				sucesso ? "Atualizado com sucesso!" : "Falha na atualização", 
+				sucesso ? alCidades : null);
 	}
 	
-	@RequestMapping("/atualizar/estado/{siglaUF}")
+	@RequestMapping("/atualizar/estado/{sigla}")
 	@PostMapping
 	@ResponseStatus(HttpStatus.CREATED)
-	public List<Cidade> refresh(@PathVariable(value="siglaUF") String siglaUF) {
+	public Response<List<Cidade>> refresh(@PathVariable(value="sigla") String sigla) {
 		
-		Estado estado = estRepository.getEstadoBySigla(siglaUF);
-		
-		boolean sucesso = true;
+		Estado estado = estRepository.getEstadoBySigla(sigla);
+		if(estado == null)
+			return new Response<List<Cidade>>(false, "Estado não encontrado", null);
 		
 		ArrayList<Cidade> cidades = servija.helper.Cidade.fetch(estado);
 		
-		cidRepository.saveAll(cidades);	
+		try {
+			cidRepository.saveAll(cidades);
+		}catch(Exception ex) {}
 				
 		if(cidades.size() == cidRepository.getCidadeByEstado(estado).size())
-			return cidRepository.getCidadeByEstado(estado);
-		return null;
+			return new Response<List<Cidade>>(true, "Cidades de "+sigla.toUpperCase()+" atualizadas!", cidRepository.getCidadeByEstado(estado));
+		return new Response<List<Cidade>>(false, "Erro na atualização das cidades de "+sigla.toUpperCase(), null);
 	}
 }

@@ -11,7 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import servija.controller.reqBodies.TipoServicoRequest;
-import servija.helper.Admin;
+import servija.controller.respBodies.Response;
+import servija.helper.User;
 import servija.model.Administrador;
 import servija.model.TipoServico;
 import servija.repository.CategoriaRepository;
@@ -24,79 +25,98 @@ public class TipoServicoController {
 	@Autowired
 	TipoServicoRepository tpRepository;
 	@Autowired
-	Admin authenticator;
+	User authenticator;
 	@Autowired
 	CategoriaRepository catRepository;
 
 	@RequestMapping("/{id}")
 	@GetMapping
-	public TipoServico get(@PathVariable int id) {
-		return tpRepository.findById(id).orElse(null);
+	public Response<TipoServico> get(@PathVariable int id) {
+		return new Response<TipoServico>(true, "Tipo de Serviço", tpRepository.findById(id).orElse(null));
 	}
 	
-	@RequestMapping("/nome/contem/{nome}")
+	@RequestMapping("/contem/{nome}")
 	@GetMapping
-	public List<TipoServico> get(@PathVariable String nome) {
-		return tpRepository.getAllByNomeContains(nome);
+	public Response<List<TipoServico>> get(@PathVariable String nome) {
+		return new Response<List<TipoServico>>(true, "Tipo de Serviço com '"+nome+"'",tpRepository.getAllByNomeContains(nome));
 	}
 	
 	@RequestMapping("/")
 	@PostMapping
-	public TipoServico create(@RequestBody TipoServicoRequest request) {
+	public Response<TipoServico> create(@RequestBody TipoServicoRequest request) {
 		TipoServico tpServico = new TipoServico();
 		
-		Administrador admin = authenticator.auth(request.token);
+		Administrador admin = authenticator.authAdmin(request.token);
 		if(admin == null)
-			return null;
+			return new Response<TipoServico>(false, "Usuário não autorizado!", null);
 		
 		tpServico.setAdmin(admin);
-		tpServico.setCategoria(
-			catRepository.findById(request.obj.categoria).get()
-		);
+		
+		try {
+			tpServico.setCategoria(
+				catRepository.findById(request.obj.categoria).get()
+			);
+		}catch(Exception ex) {
+			return new Response<TipoServico>(false, "Categoria não encontrada!", null);
+		}
+		
 		tpServico.setDescricao(request.obj.descricao);
 		tpServico.setNome(request.obj.nome);
 		
-		tpRepository.save(tpServico);
-		
-		return tpServico;
+		try {
+			tpRepository.save(tpServico);
+		}catch(Exception ex) {
+			return new Response<TipoServico>(false, "Falha na criação!", null);
+		}
+		return new Response<TipoServico>(true, "Tipo de Serviço salvo!", tpServico);
 	}
 	
 	@RequestMapping("/editar/{id}")
 	@PostMapping
-	public TipoServico edit(@PathVariable int id, @RequestBody TipoServicoRequest request) {
-		TipoServico tp = tpRepository.findById(id).get();
+	public Response<TipoServico> edit(@PathVariable int id, @RequestBody TipoServicoRequest request) {
+		TipoServico tp = tpRepository.findById(id).orElse(null);
+		if(tp == null)
+			return new Response<TipoServico>(false, "Tipo de Serviço não encontrado!", null);
 		
-		Administrador admin = authenticator.auth(request.token);
+		Administrador admin = authenticator.authAdmin(request.token);
 		if(admin == null)
-			return null;
+			return new Response<TipoServico>(false, "Usuário não autorizado!", null);
 		
 		
 		tp.setAdmin(admin);
-		tp.setCategoria(
-			catRepository.findById(request.obj.categoria).get()
-		);
+		try {
+			tp.setCategoria(
+				catRepository.findById(request.obj.categoria).get()
+			);
+		}catch(Exception ex) {
+			return new Response<TipoServico>(false, "Categoria não encontrada!", null);
+		}
 		tp.setDescricao(request.obj.descricao);
 		tp.setNome(request.obj.nome);
 		
-		tpRepository.save(tp);
+		try {
+			tpRepository.save(tp);
+		}catch(Exception ex) {
+			return new Response<TipoServico>(false, "Falha na edição!", null);
+		}
 		
-		return tp;
+		return new Response<TipoServico>(true, "Tipo de Serviço editado!", tp);
 	}
 
 	@RequestMapping("/deletar/{id}")
 	@PostMapping
-	public boolean delete(@PathVariable int id, @RequestBody TipoServicoRequest request) {
-		TipoServico tp = tpRepository.findById(id).get();
+	public Response<Boolean> delete(@PathVariable int id, @RequestBody TipoServicoRequest request) {
+		TipoServico tp = tpRepository.findById(id).orElse(null);
 		if(tp == null)
-			return false;
+			return new Response<Boolean>(false, "Tipo de Serviço não encontrado!", false);
 		
-		Administrador admin = authenticator.auth(request.token);
+		Administrador admin = authenticator.authAdmin(request.token);
 		if(admin == null)
-			return false;
+			return new Response<Boolean>(false, "Usuário não autorizado!", false);
 		
 		tpRepository.delete(tp);
 		
-		return true;
+		return new Response<Boolean>(true, "Tipo de Serviço removido!", true);
 		
 	}
 }

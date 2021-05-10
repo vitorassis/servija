@@ -23,6 +23,9 @@ public class Cidade {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
+
+	@Column
+	private String nome;
 	
 	@ManyToOne
 	@JoinColumn(name="estado_id", referencedColumnName = "id")
@@ -32,9 +35,6 @@ public class Cidade {
 	@JoinColumn(name="localidade_id", referencedColumnName = "id")
 	@JsonBackReference
 	private Localidade localidade;
-	
-	@Column
-	private String nome;
 	
 	public Cidade(Estado estado, String nome) {
 		this.estado = estado;

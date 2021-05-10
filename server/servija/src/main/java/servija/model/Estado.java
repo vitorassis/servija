@@ -19,13 +19,13 @@ public class Estado {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
-	@Column(nullable = false)
+	@Column(nullable = false, unique = true)
 	private String nome;
 	
-	@Column(nullable = false)
+	@Column(nullable = false, unique = true)
 	private int codigo;
 	
-	@Column(nullable = false)
+	@Column(nullable = false, unique = true)
 	private String sigla;
 	
 	public Estado() {}

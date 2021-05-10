@@ -1,0 +1,1577 @@
+{
+	"info": {
+		"_postman_id": "c97f3dd9-b9f9-4072-9b70-1eb224115679",
+		"name": "servija-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "cidades",
+			"item": [
+				{
+					"name": "listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/servija/api/cidades/listar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"servija",
+								"api",
+								"cidades",
+								"listar"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "listar",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/servija/api/cidades/listar",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"servija",
+										"api",
+										"cidades",
+										"listar"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "selecionar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/servija/api/cidades/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"servija",
+								"api",
+								"cidades",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "selecionar",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/servija/api/cidades/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"servija",
+										"api",
+										"cidades",
+										"1"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "do estado",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/servija/api/cidades/estado/sp",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"servija",
+								"api",
+								"cidades",
+								"estado",
+								"sp"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "do estado",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/servija/api/cidades/estado/sp",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"servija",
+										"api",
+										"cidades",
+										"estado",
+										"sp"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "atualizar tudo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/servija/api/cidades/atualizar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"servija",
+								"api",
+								"cidades",
+								"atualizar"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "atualizar tudo",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/servija/api/cidades/atualizar",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"servija",
+										"api",
+										"cidades",
+										"atualizar"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "atualizar do estado",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/servija/api/cidades/atualizar/estado/df",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"servija",
+								"api",
+								"cidades",
+								"atualizar",
+								"estado",
+								"df"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "atualizar do estado",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/servija/api/cidades/atualizar/estado/df",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"servija",
+										"api",
+										"cidades",
+										"atualizar",
+										"estado",
+										"df"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "estados",
+			"item": [
+				{
+					"name": "listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/servija/api/estados/listar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"servija",
+								"api",
+								"estados",
+								"listar"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "listar",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/servija/api/estados/listar",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"servija",
+										"api",
+										"estados",
+										"listar"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "atualizar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/servija/api/estados/atualizar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"servija",
+								"api",
+								"estados",
+								"atualizar"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "atualizar",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": null
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "localidades",
+			"item": [
+				{
+					"name": "listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/servija/api/localidades/listar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"servija",
+								"api",
+								"localidades",
+								"listar"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "listar",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/servija/api/localidades/listar",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"servija",
+										"api",
+										"localidades",
+										"listar"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "selecionar por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/servija/api/localidades/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"servija",
+								"api",
+								"localidades",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "selecionar por Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/servija/api/localidades/2",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"servija",
+										"api",
+										"localidades",
+										"2"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "selecionar por CEP",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/servija/api/localidades/consulta/cep/17123030",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"servija",
+								"api",
+								"localidades",
+								"consulta",
+								"cep",
+								"17123030"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "selecionar por CEP",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/servija/api/localidades/consulta/cep/17123030",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"servija",
+										"api",
+										"localidades",
+										"consulta",
+										"cep",
+										"17123030"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "criar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\": \"202cb962ac59075b964b07152d234b70\",\n    \"obj\":{\n        \"cidadePrincipal\": 3802,\n        \"cidades\": [\n            3802,\n            3812,\n            3813\n        ]\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/servija/api/localidades/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"servija",
+								"api",
+								"localidades",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "criar",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"token\": \"202cb962ac59075b964b07152d234b70\",\n    \"obj\":{\n        \"cidadePrincipal\": 3802,\n        \"cidades\": [\n            3802,\n            3812,\n            3813\n        ]\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/servija/api/localidades/",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"servija",
+										"api",
+										"localidades",
+										""
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "editar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\": \"202cb962ac59075b964b07152d234b70\",\n    \"obj\":{\n        \"cidadePrincipal\": 3802,\n        \"cidades\": [\n            3802,\n            3812,\n            3813,\n            3420\n        ]\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/servija/api/localidades/editar/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"servija",
+								"api",
+								"localidades",
+								"editar",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "editar",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"token\": \"202cb962ac59075b964b07152d234b70\",\n    \"obj\":{\n        \"cidadePrincipal\": 3802,\n        \"cidades\": [\n            3802,\n            3812,\n            3813,\n            3420\n        ]\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/servija/api/localidades/editar/3",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"servija",
+										"api",
+										"localidades",
+										"editar",
+										"3"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\": \"202cb962ac59075b964b07152d234b70\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/servija/api/localidades/deletar/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"servija",
+								"api",
+								"localidades",
+								"deletar",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "deletar",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"token\": \"202cb962ac59075b964b07152d234b70\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/servija/api/localidades/deletar/3",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"servija",
+										"api",
+										"localidades",
+										"deletar",
+										"3"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "categorias",
+			"item": [
+				{
+					"name": "selecionar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/servija/api/categorias/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"servija",
+								"api",
+								"categorias",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "selecionar",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/servija/api/categorias/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"servija",
+										"api",
+										"categorias",
+										"1"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "buscar nome",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/servija/api/categorias/contem/des",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"servija",
+								"api",
+								"categorias",
+								"contem",
+								"des"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "buscar nome",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/servija/api/categorias/contem/des",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"servija",
+										"api",
+										"categorias",
+										"contem",
+										"des"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "criar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\": \"202cb962ac59075b964b07152d234b70\",\n    \"obj\":{\n        \"categoriaPai\":7,\n        \"nome\": \"Buffet\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/servija/api/categorias/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"servija",
+								"api",
+								"categorias",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "criar",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"token\": \"202cb962ac59075b964b07152d234b70\",\n    \"obj\":{\n        \"categoriaPai\":7,\n        \"nome\": \"Buffet\"\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/servija/api/categorias/",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"servija",
+										"api",
+										"categorias",
+										""
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "editar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\": \"202cb962ac59075b964b07152d234b70\",\n    \"obj\":{\n        \"categoriaPai\":7,\n        \"nome\": \"Buffet de Festa\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/servija/api/categorias/editar/8",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"servija",
+								"api",
+								"categorias",
+								"editar",
+								"8"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "editar",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"token\": \"202cb962ac59075b964b07152d234b70\",\n    \"obj\":{\n        \"categoriaPai\":7,\n        \"nome\": \"Buffet de Festa\"\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/servija/api/categorias/editar/8",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"servija",
+										"api",
+										"categorias",
+										"editar",
+										"8"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\": \"202cb962ac59075b964b07152d234b70\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/servija/api/categorias/deletar/8",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"servija",
+								"api",
+								"categorias",
+								"deletar",
+								"8"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "deletar",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"token\": \"202cb962ac59075b964b07152d234b70\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/servija/api/categorias/deletar/8",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"servija",
+										"api",
+										"categorias",
+										"deletar",
+										"8"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "tiposservico",
+			"item": [
+				{
+					"name": "selecionar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/servija/api/tiposservico/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"servija",
+								"api",
+								"tiposservico",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "selecionar",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/servija/api/tiposservico/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"servija",
+										"api",
+										"tiposservico",
+										"1"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "buscar nome",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/servija/api/tiposservico/contem/garçom",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"servija",
+								"api",
+								"tiposservico",
+								"contem",
+								"garçom"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "buscar nome",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/servija/api/tiposservico/contem/garçom",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"servija",
+										"api",
+										"tiposservico",
+										"contem",
+										"garçom"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "criar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\": \"202cb962ac59075b964b07152d234b70\",\n    \"obj\":{\n        \"categoria\":7,\n        \"nome\":\"Garçom\",\n        \"descricao\":\"Serviço de Garçom\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/servija/api/tiposservico/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"servija",
+								"api",
+								"tiposservico",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "criar",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"token\": \"202cb962ac59075b964b07152d234b70\",\n    \"obj\":{\n        \"categoria\":7,\n        \"nome\":\"Garçom\",\n        \"descricao\":\"Serviço de Garçom\"\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/servija/api/tiposservico/",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"servija",
+										"api",
+										"tiposservico",
+										""
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "editar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\": \"202cb962ac59075b964b07152d234b70\",\n    \"obj\":{\n        \"categoria\":7,\n        \"nome\":\"Garçom\",\n        \"descricao\":\"Serviço de Garçom e Garçonete\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/servija/api/tiposservico/editar/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"servija",
+								"api",
+								"tiposservico",
+								"editar",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "editar",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"token\": \"202cb962ac59075b964b07152d234b70\",\n    \"obj\":{\n        \"categoria\":7,\n        \"nome\":\"Garçom\",\n        \"descricao\":\"Serviço de Garçom e Garçonete\"\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/servija/api/tiposservico/editar/2",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"servija",
+										"api",
+										"tiposservico",
+										"editar",
+										"2"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\": \"202cb962ac59075b964b07152d234b70\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/servija/api/tiposservico/deletar/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"servija",
+								"api",
+								"tiposservico",
+								"deletar",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "deletar",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"token\": \"202cb962ac59075b964b07152d234b70\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/servija/api/tiposservico/deletar/2",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"servija",
+										"api",
+										"tiposservico",
+										"deletar",
+										"2"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "anunciante",
+			"item": [
+				{
+					"name": "selecionar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/servija/api/anunciante/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"servija",
+								"api",
+								"anunciante",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "selecionar",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/servija/api/anunciante/2",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"servija",
+										"api",
+										"anunciante",
+										"2"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"obj\":{\n        \"nome\": \"Joãozinho\",\n        \"cpf\": \"725.912.190-44\",\n        \"email\": \"joao@zinh.o\",\n        \"senha\": \"batatafrita\",\n        \"empresa\": \"Joao Inc\",\n        \"login\": \"jaozin\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/servija/api/anunciante/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"servija",
+								"api",
+								"anunciante",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "cadastrar",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"obj\":{\n        \"nome\": \"Joãozinho\",\n        \"cpf\": \"725.912.190-44\",\n        \"email\": \"joao@zinh.o\",\n        \"senha\": \"batatafrita\",\n        \"empresa\": \"Joao Inc\",\n        \"login\": \"jaozin\"\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/servija/api/anunciante/",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"servija",
+										"api",
+										"anunciante",
+										""
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "editar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\": \"85a1bd745fe08481d12effaa5cb728f7\",\n    \"obj\":{\n        \"nome\": \"Joãozinho\",\n        \"cpf\": \"725.912.190-44\",\n        \"email\": \"joao@zinh.o\",\n        \"senha\": \"batatafrita\",\n        \"empresa\": \"Joao Inc\",\n        \"login\": \"jaozin\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/servija/api/anunciante/editar/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"servija",
+								"api",
+								"anunciante",
+								"editar",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "editar",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"token\": \"85a1bd745fe08481d12effaa5cb728f7\",\n    \"obj\":{\n        \"nome\": \"Joãozinho\",\n        \"cpf\": \"725.912.190-44\",\n        \"email\": \"joao@zinh.o\",\n        \"senha\": \"batatafrita\",\n        \"empresa\": \"Joao Inc\",\n        \"login\": \"jaozin\"\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/servija/api/anunciante/editar/2",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"servija",
+										"api",
+										"anunciante",
+										"editar",
+										"2"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\": \"85a1bd745fe08481d12effaa5cb728f7\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/servija/api/anunciante/deletar/6",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"servija",
+								"api",
+								"anunciante",
+								"deletar",
+								"6"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "deletar",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"token\": \"85a1bd745fe08481d12effaa5cb728f7\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/servija/api/anunciante/deletar/6",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"servija",
+										"api",
+										"anunciante",
+										"deletar",
+										"6"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"login\":\"jaozin\",\n    \"senha\": \"batatafrita\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/servija/api/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"servija",
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"login\":\"jaozin\",\n    \"senha\": \"batatafrita\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/servija/api/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"servija",
+								"api",
+								"login"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	]
+}
