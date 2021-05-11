@@ -1,6 +1,8 @@
 package servija.model;
 
 import java.sql.Time;
+import java.time.LocalTime;
+import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.Entity;
@@ -15,7 +17,10 @@ import javax.persistence.Table;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 @Entity
 @Table(name = "anuncios")
@@ -26,13 +31,16 @@ public class Anuncio {
 	
 	@ManyToOne
 	@JoinColumn(name = "anunciante_id", referencedColumnName = "usuario_id")
+	@JsonBackReference
 	private Anunciante anunciante;
 	
 	@ManyToOne
+	@OnDelete(action = OnDeleteAction.CASCADE)
 	@JoinColumn(name = "localidade_id", referencedColumnName = "id")
 	private Localidade localidade;
 	
 	@ManyToOne
+	@OnDelete(action = OnDeleteAction.CASCADE)
 	@JoinColumn(name = "tpservico_id", referencedColumnName = "id")
 	private TipoServico tipoServico;
 	
@@ -42,7 +50,7 @@ public class Anuncio {
 	
 	private double valor;
 	
-	private Time tempo;
+	private LocalTime tempo;
 	
 	@OneToMany(mappedBy = "anuncio")
 	@OnDelete(action = OnDeleteAction.CASCADE)
@@ -55,8 +63,8 @@ public class Anuncio {
 	private Set<Imagem> imagens;
 
 	public Anuncio(int id, Anunciante anunciante, Localidade localidade, TipoServico tipoServico, String descricao,
-			String descrLonga, double valor, Time tempo) {
-		super();
+			String descrLonga, double valor, LocalTime tempo) {
+		this();
 		this.id = id;
 		this.anunciante = anunciante;
 		this.localidade = localidade;
@@ -69,6 +77,8 @@ public class Anuncio {
 
 	public Anuncio() {
 		super();
+		this.disponibilidades = new HashSet<Disponibilidade>();
+		this.imagens = new HashSet<Imagem>();
 	}
 	
 	
@@ -130,13 +140,35 @@ public class Anuncio {
 		this.valor = valor;
 	}
 
-	public Time getTempo() {
+	public LocalTime getTempo() {
 		return tempo;
 	}
 
-	public void setTempo(Time tempo) {
+	public void setTempo(LocalTime tempo) {
 		this.tempo = tempo;
 	}
-	
-	
+
+	public void addImagem(Imagem imagem) {
+		this.imagens.add(imagem);		
+	}
+
+	public void addDisponibilidade(Disponibilidade disponibilidade) {
+		this.disponibilidades.add(disponibilidade);		
+	}
+
+	public void setTempo(String tempo) {
+		this.tempo = LocalTime.of(Integer.parseInt(tempo.split(":")[0]), 
+				Integer.parseInt(tempo.split(":")[1]));
+		
+	}
+
+	public Set<Disponibilidade> getDisponibilidades() {
+		// TODO Auto-generated method stub
+		return this.disponibilidades;
+	}
+
+	public Set<Imagem> getImagens() {
+		// TODO Auto-generated method stub
+		return this.imagens;
+	}
 }

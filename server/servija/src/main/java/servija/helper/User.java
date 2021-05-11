@@ -49,4 +49,19 @@ public class User {
 			
 		return anunc != null && anunc.getId() == checkId ? anunc : null;
 	}
+	
+	public Anunciante authAnunciante(String token) {
+		Anunciante anunc = new Anunciante();
+		if(token == null)
+			return null;
+		
+		Usuario usuario = usuRepository.getUsuarioBySenha(token);
+		
+		if(usuario != null) 
+			anunc = anRepository.getOne(usuario.getId());
+		else
+			anunc = null;
+			
+		return anunc;
+	}
 }

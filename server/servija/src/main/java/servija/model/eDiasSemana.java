@@ -1,24 +1,20 @@
 package servija.model;
 
 public enum eDiasSemana {
-	DOMINGO("Domingo"), 
-	SEGUNDA("Segunda-Feira"), 
-	TERCA("Terça-Feira"), 
-	QUARTA("Quarta-Feira"), 
-	QUINTA("Quinta-Feira"), 
-	SEXTA("Sexta-Feira"), 
-	SABADO("Sábado");
+	DOMINGO(1), 
+	SEGUNDA(2), 
+	TERCA(3), 
+	QUARTA(4), 
+	QUINTA(5), 
+	SEXTA(6), 
+	SABADO(7);
 	
-	public String valor; 
-	eDiasSemana(String dia) {
+	public int valor; 
+	eDiasSemana(int dia) {
 		valor = dia;
 	}
 	
-	public String getValor() {
+	public int getValor() {
 		return valor;
-	}
-	
-	public static eDiasSemana lookup(String dia) {
-		return servija.helper.LookupUtil.lookup(eDiasSemana.class, dia);
 	}
 }

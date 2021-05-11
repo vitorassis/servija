@@ -44,6 +44,14 @@ public class Imagem {
 	}
 	
 	
+	
+	
+	public Imagem(Anuncio anuncio, String link) {
+		super();
+		this.anuncio = anuncio;
+		this.link = link;
+	}
+
 	//==============================================
 
 	public int getId() {
