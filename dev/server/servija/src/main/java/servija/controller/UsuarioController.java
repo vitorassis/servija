@@ -11,6 +11,7 @@ import servija.model.Usuario;
 import servija.controller.reqBodies.UsuarioRequest;
 import servija.controller.respBodies.Response;
 import servija.repository.UsuarioRepository;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 @RestController
 public class UsuarioController {
@@ -19,6 +20,7 @@ public class UsuarioController {
 	UsuarioRepository usuRepository;
 	
 	@PostMapping
+	@CrossOrigin(origins = "http://localhost:3000")
 	@RequestMapping("/login")
 	public Response<Usuario> login(@RequestBody UsuarioRequest request) {
 		Usuario usuario = new Usuario(request.login, null, request.senha);

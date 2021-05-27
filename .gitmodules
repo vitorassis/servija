@@ -1,0 +1,3 @@
+[submodule "dev/dev/server/servija/gs-rest-service-cors"]
+	path = dev/dev/server/servija/gs-rest-service-cors
+	url = https://github.com/spring-guides/gs-rest-service-cors.git

@@ -1,0 +1,131 @@
+header{
+	background-color: #333333;
+}
+#homeTitle{
+	font-family: 'Zen Dots', cursive; 
+	font-size: 35px;
+	color: white;
+	text-align: center;
+}
+.Menu{
+	font-family: 'Krona One', sans-serif;
+	font-size: 15px;
+	color: white;
+	text-align: center;
+}
+.Menu:hover{
+	color: yellow;
+	border-bottom: yellow solid 3px;
+	font-size: 16px;
+}
+.Voltar{
+	font-family: 'Krona One', sans-serif;
+	font-size: 15px;
+	color: white;
+	text-align: center;
+	border-left: yellow solid 3px;
+}
+.Voltar:hover{
+	color: yellow;
+	border-bottom: yellow solid 3px;
+	border-left: transparent;
+}
+#Titulos{
+	
+	font-family: 'Krona One', sans-serif;
+	font-size: 25px;
+	color: Yellow;
+}
+#Formulario{
+	margin-top: 100px; 
+	margin-bottom: 100px;
+}
+#SubTitulos{
+	font-family: 'Krona One', sans-serif;
+	font-size: 15px;
+	color:white;
+}
+#input{
+	font-family: 'Krona One', sans-serif;
+	background-color: #333333;
+	color: white;
+	font-size: 13px;
+	border-top-right-radius: 8px;
+	border-bottom-right-radius:  8px;
+	border-top-left-radius: 8px;
+	border-bottom-left-radius:  8px;
+	border-top: solid yellow 2px;
+	border-left: solid yellow 2px;
+	border-right: solid yellow 2px;
+	border-bottom: solid yellow 2px
+}
+#input::-webkit-input-placeholder {
+	font-family: 'Krona One', sans-serif;
+	font-size: 12px;
+	color: white;
+}
+input:focus{
+	outline: 0 0 0 0  !important;
+	box-shadow: 0 0 0 0 !important;
+}
+	
+.btCadastrar{
+	font-family: 'Krona One', sans-serif;
+	background-color: #333333;
+	width: 100%;
+	height: 50px; 
+	color: yellow;
+	font-size: 15px; 
+	margin-top: 30px; 
+	border-top-right-radius: 8px;
+	border-bottom-right-radius:  8px;
+	border-top-left-radius: 8px;
+	border-bottom-left-radius:  8px;
+	border-top: solid yellow 2px;
+	border-left: solid yellow 2px;
+	border-right: solid yellow 2px;
+	border-bottom: solid yellow 2px
+}
+.btCadastrar:hover{
+	font-family: 'Krona One', sans-serif;
+	background-color: yellow;
+	width: 100%; 
+	height: 50px; 
+	color: #333333;
+	font-size: 15px; 
+	border-top-right-radius: 8px;
+	border-bottom-right-radius:  8px;
+	border-top: transparent;
+	border-left: transparent;
+	border-right: transparent;
+	border-bottom: transparent;
+}
+#RodapeEndereço{
+	font-family: 'Krona One', sans-serif;
+	font-size: 13px;
+	color:white;
+	margin-bottom: 30px;
+}
+#RodapeFaleConosco{
+	font-family: 'Krona One', sans-serif;
+	font-size: 22px;
+	color:yellow;
+	margin-top: 25px;
+}
+#RodapeSocial{
+	font-family: 'Krona One', sans-serif;
+	font-size: 14px;
+	color:white;
+	margin-top: 25px;
+}
+#icons{
+	font-size: 20px;
+	color:white;
+}
+#barra{
+	font-family: 'Montserrat', sans-serif;
+	padding: 1.0em 0 1.0em 0;
+	font-size: 15px;
+	color: white;
+	text-align: center;
+}
